@@ -24,7 +24,7 @@ const Index = () => {
   return (
     <div className="flex items-center justify-center min-h-screen p-6 bg-gray-100">
       <div className="w-full max-w-md p-6 bg-white border rounded-lg shadow-lg">
-        <h1 className="mb-4 text-2xl font-bold text-center text-gray-700">
+        <h1 className="mb-4 text-2xl font-bold text-center text-gray-700 font-raleway">
           Logging with <span className="text-blue-500">useState</span>
         </h1>
 
