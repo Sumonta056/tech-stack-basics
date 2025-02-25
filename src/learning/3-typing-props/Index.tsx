@@ -16,7 +16,7 @@ function Index() {
         messageCount={messageCount}
         isLogged={isLogged}
       />
-      <PersonList person={personData} />
+      <PersonList person={personData}  />
     </div>
   );
 }

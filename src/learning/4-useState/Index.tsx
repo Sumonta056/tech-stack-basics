@@ -1,5 +1,6 @@
+import Button from "@/components/Button";
 import { useState } from "react";
-import { FaEnvelope, FaSignInAlt, FaSignOutAlt, FaUser } from "react-icons/fa";
+import { FaSignInAlt, FaSignOutAlt } from "react-icons/fa";
 
 type AuthUser = {
   name: string;
@@ -28,18 +29,21 @@ const Index = () => {
         </h1>
 
         <div className="flex justify-center gap-4">
-          <button
+          <Button
+            icon={<FaSignInAlt />}
+            name="Login"
+            bgColor="bg-blue-500"
+            padding="px-4 py-2"
             onClick={handleLogin}
-            className="flex items-center gap-2 px-4 py-2 font-semibold text-white transition bg-blue-500 rounded-lg shadow-md hover:bg-blue-600"
-          >
-            <FaSignInAlt /> Login
-          </button>
-          <button
+          />
+          <Button
+            icon={<FaSignOutAlt />}
+            name="Logout"
+            bgColor="bg-red-500"
+            padding="px-4 py-2"
+            size="medium"
             onClick={handleLogout}
-            className="flex items-center gap-2 px-4 py-2 font-semibold text-white transition bg-red-500 rounded-lg shadow-md hover:bg-red-600"
-          >
-            <FaSignOutAlt /> Logout
-          </button>
+          />
         </div>
 
         <div className="mt-6 text-center">
@@ -54,10 +58,10 @@ const Index = () => {
           {loggedIn ? (
             <div className="p-4 mt-4 border rounded-lg shadow-sm bg-gray-50">
               <p className="flex items-center gap-2 text-gray-700">
-                <FaUser className="text-blue-500" /> {loginInfo?.name}
+                {loginInfo?.name}
               </p>
               <p className="flex items-center gap-2 text-gray-700">
-                <FaEnvelope className="text-red-500" /> {loginInfo?.email}
+                {loginInfo?.email}
               </p>
             </div>
           ) : (
