@@ -22,7 +22,7 @@ Follow these steps to set up your project:
 
 4. **Install Tailwind CSS and other dependencies**
    ```sh
-   npm install -D tailwindcss postcss autoprefixer
+   npm install -D tailwindcss@3 postcss autoprefixer
    ```
 
 5. **Initialize Tailwind CSS**
