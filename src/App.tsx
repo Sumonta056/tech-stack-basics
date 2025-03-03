@@ -4,6 +4,7 @@ import Like from "./components/like-unlike/Like";
 import TypingProps from "./learning/3-typing-props/Index";
 import UseState from "./learning/4-useState/Index";
 import ParentChild from "./learning/5-parent-child/Main";
+import UseContext from "./learning/6-useContext-useRef/Index";
 import Home from "./note-app/pages/Home";
 import NewNote from "./note-app/pages/NewNote";
 import NotePage from "./note-app/pages/NotePage";
@@ -16,6 +17,7 @@ export default function App() {
       <Route path="/3-typing-props" element={<TypingProps />} />
       <Route path="/4-usestate" element={<UseState />} />
       <Route path="/5-parent-child" element={<ParentChild />} />
+      <Route path="/6-usecontext" element={<UseContext />} />
       <Route path="/home" element={<Home />} />
       <Route path="/new" element={<NewNote />} />
       <Route path="/note/:id" element={<NotePage />} />
