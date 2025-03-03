@@ -8,6 +8,7 @@ import UseContext from "./learning/6-useContext-useRef/Index";
 import Home from "./note-app/pages/Home";
 import NewNote from "./note-app/pages/NewNote";
 import NotePage from "./note-app/pages/NotePage";
+import BlogPost from "./learning/7-useReducer/BlogPost";
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
       <Route path="/home" element={<Home />} />
       <Route path="/new" element={<NewNote />} />
       <Route path="/note/:id" element={<NotePage />} />
+      <Route path="/7-usereducer" element={<BlogPost />} />
       {/* Nested Routes */}
       <Route path="/:id">
         <Route index element={<div>User Profile Id</div>}></Route>
