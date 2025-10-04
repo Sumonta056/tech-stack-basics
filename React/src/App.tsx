@@ -4,6 +4,7 @@ import Like from "./components/like-unlike/Like";
 import Form from "./react-hook-form-zod/Form";
 import DataFetching from "./tanstack-query/dataFetching";
 import { DataPushing } from "./tanstack-query/dataPushing";
+import UseRefMain from "./use-hook/useRef/UseRefMain";
 import TodoList from "./zustand/TodoList";
 const queryClient = new QueryClient();
 
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/3" element={<DataPushing />} />
         <Route path="/4" element={<TodoList />} />
         <Route path="/5" element={<Form />} />
+        <Route path="/6" element={<UseRefMain />} />
         <Route path="*" element={<div>Not Found</div>} />
         {/* <Route path="*" element={<Navigate to="/" />} /> */}
       </Routes>
