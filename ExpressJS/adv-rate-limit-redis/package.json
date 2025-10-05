@@ -1,0 +1,19 @@
+{
+  "name": "adv-rate-limit-redis",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "ioredis": "^5.8.0",
+    "rate-limit-redis": "^4.2.2"
+  }
+}
+
