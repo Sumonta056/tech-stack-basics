@@ -48,3 +48,19 @@ img {
   object-fit: cover;
 }
 ```
+
+5. Using `column()` instead of grid and flexbox : Give a view like pinterest
+
+```css
+.layout {
+  width: min(1000px, 100%);
+  margin: 0 auto;
+  columns: 3 300px;
+  column-gap: 1em;
+}
+img {
+  display: block;
+  margin-bottom: 1em;
+  width: 100%;
+}
+```
