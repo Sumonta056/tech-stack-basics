@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sumonta Saha Mridul - LinkedIn</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f3f2ef;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+      }
+
+      .navbar-custom {
+        background-color: #ffffff;
+        border-bottom: 1px solid #e0e0e0;
+        padding: 8px 0;
+      }
+
+      .navbar-brand img {
+        height: 34px;
+      }
+
+      .nav-icon {
+        color: #666666;
+        font-size: 20px;
+        margin: 0 15px;
+        text-decoration: none;
+      }
+
+      .nav-icon:hover {
+        color: #0073b1;
+      }
+
+      .profile-card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+        margin-bottom: 16px;
+      }
+
+      .cover-photo {
+        height: 200px;
+        background-image: url("https://media.licdn.com/dms/image/v2/D5616AQEbhCkbi1CySg/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1732929714115?e=1761177600&v=beta&t=MgINIp8KzTGhyOKLyj5S7BvvwJbQvmAq7yBPJQTwXCU");
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px 8px 0 0;
+        position: relative;
+      }
+
+      .profile-photo {
+        width: 152px;
+        height: 152px;
+        border-radius: 50%;
+        border: 4px solid white;
+        position: absolute;
+        bottom: -76px;
+        left: 24px;
+        object-fit: cover;
+      }
+
+      .profile-info {
+        padding: 80px 24px 24px;
+      }
+
+      .profile-name {
+        font-size: 24px;
+        font-weight: 600;
+        color: #000000;
+        margin-bottom: 4px;
+      }
+
+      .profile-title {
+        color: #666666;
+        font-size: 16px;
+        margin-bottom: 8px;
+        line-height: 1.4;
+      }
+
+      .profile-location {
+        color: #666666;
+        font-size: 14px;
+        margin-bottom: 16px;
+      }
+
+      .company-info {
+        display: flex;
+        align-items: center;
+        margin-top: 16px;
+      }
+
+      .company-logo {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+      }
+
+      .post-card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+        margin-bottom: 16px;
+      }
+
+      .post-header {
+        padding: 12px 16px;
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      .create-post {
+        display: flex;
+        align-items: center;
+        padding: 16px;
+      }
+
+      .create-post img {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        margin-right: 12px;
+      }
+
+      .post-input {
+        border: 1px solid #ccc;
+        border-radius: 50px;
+        padding: 12px 16px;
+        background: #f3f2ef;
+        cursor: pointer;
+        flex: 1;
+      }
+
+      .post-options {
+        display: flex;
+        justify-content: space-around;
+        padding: 8px 16px 16px;
+      }
+
+      .post-option {
+        display: flex;
+        align-items: center;
+        color: #666666;
+        font-weight: 500;
+        padding: 8px 16px;
+        border-radius: 4px;
+        text-decoration: none;
+      }
+
+      .post-option:hover {
+        background-color: #f3f2ef;
+        color: #666666;
+      }
+
+      .post-option i {
+        margin-right: 8px;
+      }
+
+      .video-icon {
+        color: #057642;
+      }
+      .photo-icon {
+        color: #378fe9;
+      }
+      .article-icon {
+        color: #e16745;
+      }
+
+      .feed-post {
+        padding: 16px;
+      }
+
+      .post-author {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+      }
+
+      .author-photo {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        margin-right: 12px;
+      }
+
+      .author-info h6 {
+        margin: 0;
+        font-weight: 600;
+      }
+
+      .author-info small {
+        color: #666666;
+      }
+
+      .post-content {
+        margin-bottom: 16px;
+        line-height: 1.5;
+      }
+
+      .post-stats {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        border-bottom: 1px solid #e0e0e0;
+        margin-bottom: 8px;
+        color: #666666;
+        font-size: 12px;
+      }
+
+      .post-actions {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .post-action {
+        display: flex;
+        align-items: center;
+        color: #666666;
+        font-weight: 500;
+        padding: 8px 16px;
+        border-radius: 4px;
+        text-decoration: none;
+        border: none;
+        background: none;
+      }
+
+      .post-action:hover {
+        background-color: #f3f2ef;
+        color: #666666;
+      }
+
+      .post-action i {
+        margin-right: 8px;
+      }
+
+      .verified-badge {
+        color: #0073b1;
+        margin-left: 4px;
+      }
+
+      .new-posts-btn {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+      }
+
+      .bangla-text {
+        font-family: "Kalpurush", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <i
+            class="fab fa-linkedin"
+            style="color: #0073b1; font-size: 34px"
+          ></i>
+        </a>
+        <div class="d-flex align-items-center">
+          <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
+          <a href="#" class="nav-icon"><i class="fas fa-home"></i></a>
+          <a href="#" class="nav-icon"><i class="fas fa-users"></i></a>
+          <a href="#" class="nav-icon"><i class="fas fa-briefcase"></i></a>
+          <a href="#" class="nav-icon"><i class="fas fa-comment-dots"></i></a>
+          <a href="#" class="nav-icon"><i class="fas fa-bell"></i></a>
+          <a href="#" class="nav-icon">
+            <img
+              src="https://via.placeholder.com/32x32/4CAF50/FFFFFF?text=SM"
+              alt="Profile"
+              style="width: 32px; height: 32px; border-radius: 50%"
+            />
+          </a>
+          <a href="#" class="nav-icon"><i class="fas fa-th"></i></a>
+          <span style="color: #0073b1; margin-left: 20px; font-size: 14px"
+            >Find leads free</span
+          >
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+      <!-- Top Navbar -->
+      <div>
+      </div>
+      <div class="row">
+        <!-- Main Content -->
+        <div class="col-lg-8">
+          <!-- Profile Card -->
+          <div class="profile-card">
+            <div class="cover-photo">
+              <img
+                src="https://media.licdn.com/dms/image/v2/D5603AQGmGXhYXB0MFA/profile-displayphoto-shrink_100_100/B56ZQkprSwHoAU-/0/1735781696945?e=1761177600&v=beta&t=4BqUC04LYp7Rl9xaht0sgiUyDNfBBJviOHD2Ny5eWMI"
+                alt="Sumonta Saha Mridul"
+                class="profile-photo"
+              />
+            </div>
+            <div class="profile-info">
+              <h1 class="profile-name">
+                Sumonta Saha Mridul
+                <i class="fas fa-check-circle verified-badge"></i>
+              </h1>
+              <div class="profile-title">
+                Associate Software Engineer I at Cefalo | Content Writer, Code &
+                Career Golpo (500+ Subs) |
+                <i class="fas fa-trophy" style="color: #b8860b"></i> 6x Top 10
+                in Hackathons & Project Showcase
+              </div>
+              <div class="profile-location">Narayanganj District, Dhaka</div>
+              <div class="company-info">
+                <img
+                  src="https://via.placeholder.com/20x20/0073b1/FFFFFF?text=C"
+                  alt="Cefalo"
+                  class="company-logo"
+                />
+                <span style="color: #0073b1; font-weight: 500">Cefalo</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Create Post -->
+          <div class="post-card">
+            <div class="create-post">
+              <img
+                src="https://via.placeholder.com/48x48/4CAF50/FFFFFF?text=SM"
+                alt="Your photo"
+              />
+              <div class="post-input">Start a post</div>
+            </div>
+            <div class="post-options">
+              <a href="#" class="post-option">
+                <i class="fas fa-video video-icon"></i>
+                Video
+              </a>
+              <a href="#" class="post-option">
+                <i class="fas fa-image photo-icon"></i>
+                Photo
+              </a>
+              <a href="#" class="post-option">
+                <i class="fas fa-newspaper article-icon"></i>
+                Write article
+              </a>
+            </div>
+          </div>
+
+          <!-- Sort Options -->
+          <div class="d-flex justify-content-end mb-3">
+            <small class="text-muted"
+              >Sort by: <strong>Top</strong> <i class="fas fa-chevron-down"></i
+            ></small>
+          </div>
+
+          <!-- Feed Post 1 -->
+          <div class="post-card">
+            <div class="feed-post">
+              <div class="post-author">
+                <img
+                  src="https://via.placeholder.com/48x48/FF6B35/FFFFFF?text=NJ"
+                  alt="Nasrin Jahan"
+                  class="author-photo"
+                />
+                <div class="author-info">
+                  <h6>Nasrin Jahan • Following</h6>
+                  <small
+                    >Content Writer || Yunusco Group | Research Executive | Web
+                    Content Developer | Cont...</small
+                  >
+                  <small>5h • <i class="fas fa-globe-americas"></i></small>
+                </div>
+              </div>
+
+              <div class="post-content bangla-text">
+                আমার CGPA ছিল 3.85। এটা শুনে এক নামকরা পরিকারি এডিটর হেসে
+                ফেলেছিলেন।<br /><br />
+                তার মতে, উচ্চ CGPA-ওয়ালা ছেলে-মেয়েদের নিতে তার নাকি ধাঁটি করতে
+                পারে না, ...more
+              </div>
+
+              <div class="post-stats">
+                <div>
+                  <i class="fas fa-thumbs-up" style="color: #0073b1"></i>
+                  <i class="fas fa-heart" style="color: #e74c3c"></i>
+                  <i class="fas fa-lightbulb" style="color: #f39c12"></i>
+                  Zahid Hasan and 197 others
+                </div>
+                <div>44 comments • 1 repost</div>
+              </div>
+
+              <div class="post-actions">
+                <button class="post-action">
+                  <i class="far fa-thumbs-up"></i>
+                  Like
+                </button>
+                <button class="post-action">
+                  <i class="far fa-comment"></i>
+                  Comment
+                </button>
+                <button class="post-action">
+                  <i class="fas fa-retweet"></i>
+                  Repost
+                </button>
+                <button class="post-action">
+                  <i class="far fa-paper-plane"></i>
+                  Send
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    =
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
