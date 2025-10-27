@@ -1,0 +1,50 @@
+.parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+
+  grid-template-areas:
+    "d-1 d-1 d-1 d-2 d-3"
+    "d-4 d-5 d-5 d-2 d-6"
+    "d-4 d-7 d-7 d-2 d-8 "
+    "d-9 d-9 d-9 d-2 d-8"
+    "d-9 d-9 d-9 d-2 d-8";
+}
+
+.item {
+  padding: 2em;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 2rem;
+  border: 2px solid black;
+}
+
+.div1 {
+  grid-area: d-1;
+}
+.div2 {
+  grid-area: d-2;
+}
+.div3 {
+  grid-area: d-3;
+}
+.div4 {
+  grid-area: d-4;
+}
+.div5 {
+  grid-area: d-5;
+}
+.div6 {
+  grid-area: d-6;
+}
+.div7 {
+  grid-area: d-7;
+}
+.div8 {
+  grid-area: d-8;
+}
+.div9 {
+  grid-area: d-9;
+}

@@ -1,0 +1,66 @@
+.item {
+  padding: 2em;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 2rem;
+  border: 2px solid black;
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
+
+.grid-container {
+  display: grid;
+  /* * 3 Column view */
+  /* grid-template-columns: 200px 200px 200px; */
+  /* grid-template-rows: 200px 200px; */
+  /* * Auto adjust resposive frame */
+  /* grid-template-columns: 1fr 1fr 2fr ; */
+  /* * Sidebar View */
+  /* grid-template-columns: 200px 1fr;
+  grid-template-rows: 100vh; */
+
+  /* * Centers the entire grid container within its parent */
+  /* justify-content: center; */
+  /* * Centers grid items horizontally within their cells */
+  /* justify-items: center; */
+  /* * Centers grid items vertically within their cells */
+  /* align-items: center; */
+  /* * Centers the entire grid content vertically when there's extra space */
+  /* align-content: center; */
+
+  /* grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 300px 300px 300px; */
+
+  /* * Auto alignment */
+  /* grid-auto-flow: column; */
+  /* * Auto column size for new part */
+  /* grid-auto-columns: 300px; */
+  /* * Auto row size for new part */
+  /* grid-auto-rows: 300px; */
+
+  /* also can use grid-auto-columns and grid-auto-rows */
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-rows: 200px 200px;
+  grid-template-areas:
+    "box-1 box-2 box-2 box-3"
+    "box-1 box-4 box-5 box-5";
+
+  gap: 1em;
+}
+
+.grid-container-1 {
+  /* * Auto Adjust Responsive*/
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+}
